@@ -1,0 +1,1 @@
+export default {content:['./index.html','./src/**/*.{js,jsx}'],theme:{extend:{fontFamily:{sans:['Inter','ui-sans-serif','system-ui','sans-serif'],display:['Space Grotesk','Inter','sans-serif']},boxShadow:{glow:'0 0 80px rgba(59,130,246,.18)'}}},plugins:[]};
