@@ -9,6 +9,8 @@ import {
   Menu,
   MessageCircle,
   MonitorSmartphone,
+  Monitor,
+  Smartphone,
   Palette,
   Rocket,
   Search,
@@ -17,6 +19,8 @@ import {
   Star,
   X,
   Zap,
+  PenTool,
+  Plug,
 } from 'lucide-react';
 import './index.css';
 
@@ -25,7 +29,7 @@ import Logo from './assets/icons/Logo';
 
 const WHATSAPP_NUMBER = '919128787703';
 const defaultMessage =
-  'Hi WebPilot India, I am interested in getting a website for my business.';
+  'Hi RappTech, I am interested in getting a website for my business.';
 const whatsapp = (message = defaultMessage) =>
   window.open(
     `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,
@@ -35,9 +39,14 @@ const whatsapp = (message = defaultMessage) =>
 
 const services = [
   [
-    'Business Websites',
-    MonitorSmartphone,
-    'Professional, responsive websites that give your business a strong online presence.',
+    'Website Development',
+    Monitor,
+    'We build professional, responsive websites tailored to your business needs.',
+  ],
+  [
+    'App Development',
+    Smartphone,
+    'We build fast, reliable and user-friendly mobile apps for iOS and Android.',
   ],
   [
     'Landing Pages',
@@ -49,30 +58,37 @@ const services = [
     ShoppingCart,
     'Online stores with product pages, cart, checkout and payment integrations.',
   ],
-  [
-    'Website Redesign',
-    Palette,
-    'Turn an outdated website into a modern, mobile-first experience.',
-  ],
+  // [
+  //   'Website Redesign',
+  //   Palette,
+  //   'Turn an outdated website into a modern, mobile-first experience.',
+  // ],
   [
     'SEO Setup',
     Search,
     'Technical and on-page foundations to help customers discover your website.',
   ],
-  [
-    'Domain & Hosting',
-    Globe2,
-    'We help you choose, configure and launch your website on your own domain.',
-  ],
+
   [
     'Custom Development',
     Code2,
     'Custom features, integrations and workflows when you need more.',
   ],
+  // [
+  //   'Website Maintenance',
+  //   Zap,
+  //   'Updates, monitoring and ongoing support after launch.',
+  // ],
   [
-    'Website Maintenance',
-    Zap,
-    'Updates, monitoring and ongoing support after launch.',
+    'UI/UX Design',
+    PenTool,
+    'Clean, intuitive and engaging designs that create better digital experiences.',
+  ],
+
+  [
+    'API Integration',
+    Plug,
+    'Connect your website and apps with payment gateways, APIs and third-party services.',
   ],
 ];
 const industries = [
@@ -95,11 +111,12 @@ const plans = [
     features: [
       '1–3 pages',
       'Mobile responsive',
-      'WhatsApp button',
-      'Google Maps',
+      // 'WhatsApp button',
+      // 'Google Maps',
       'Contact form',
       'Basic SEO',
       '5–7 day delivery',
+      '1 Week Support',
     ],
   },
   {
@@ -111,11 +128,12 @@ const plans = [
       '5–7 pages',
       'Custom design',
       'Gallery & testimonials',
-      'WhatsApp integration',
+      // 'WhatsApp integration',
       'Contact form',
-      'Google Maps',
+      // 'Google Maps',
       'Basic SEO',
       'Social media links',
+      '1 Month Support',
     ],
   },
   {
@@ -210,15 +228,8 @@ function App() {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-[#050b14]/75 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
           <a href="#" className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500 shadow-lg shadow-blue-500/20">
-              {/* <Rocket size={20} /> */}
-              <Logo size={42} showText={false} />
-            </div>
-            <div>
-              <div className="font-display text-lg font-bold">WebPilot</div>
-              <div className="-mt-1 text-[10px] font-semibold uppercase tracking-[.22em] text-blue-300">
-                India
-              </div>
+            <div className="flex items-center pl-8">
+              <Logo size={240} />
             </div>
           </a>
           <nav className="hidden items-center gap-7 md:flex">
@@ -454,7 +465,7 @@ function App() {
                     <button
                       onClick={() =>
                         whatsapp(
-                          `Hi WebPilot India, I would like to see the ${cat} website demo.`
+                          `Hi RappTech, I would like to see the ${cat} website demo.`
                         )
                       }
                       className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-blue-300"
@@ -552,7 +563,7 @@ function App() {
                   <button
                     onClick={() =>
                       whatsapp(
-                        `Hi WebPilot India, I am interested in the ${p.name} package (${p.price}).`
+                        `Hi RappTech, I am interested in the ${p.name} package (${p.price}).`
                       )
                     }
                     className={`mt-8 flex w-full items-center justify-center gap-2 rounded-xl px-5 py-3.5 font-bold ${p.popular ? 'bg-blue-500 hover:bg-blue-400' : 'border border-white/10 bg-white/5 hover:bg-white/10'}`}
@@ -573,7 +584,7 @@ function App() {
           <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-2 lg:px-8">
             <div>
               <div className="mb-4 text-sm font-semibold uppercase tracking-[.2em] text-blue-300">
-                Why WebPilot India
+                Why RappTech
               </div>
               <h2 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">
                 Professional websites without unnecessary complexity.
@@ -696,14 +707,8 @@ function App() {
           <div className="flex flex-col gap-10 md:flex-row md:justify-between">
             <div className="max-w-sm">
               <a href="#" className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500">
-                  <Logo size={42} showText={false} />
-                </div>
-                <div>
-                  <div className="font-display text-lg font-bold">WebPilot</div>
-                  <div className="-mt-1 text-[10px] font-semibold uppercase tracking-[.22em] text-blue-300">
-                    India
-                  </div>
+                <div className="flex items-center">
+                  <Logo size={220} />
                 </div>
               </a>
               <p className="mt-5 text-sm leading-6 text-slate-500">
@@ -768,7 +773,7 @@ function App() {
           </div>
           <div className="mt-12 flex flex-col gap-3 border-t border-white/5 pt-6 text-xs text-slate-600 sm:flex-row sm:justify-between">
             <span>
-              © {new Date().getFullYear()} WebPilot India. All rights reserved.
+              © {new Date().getFullYear()} RappTech. All rights reserved.
             </span>
             <span>Websites • E-commerce • Digital Solutions</span>
           </div>

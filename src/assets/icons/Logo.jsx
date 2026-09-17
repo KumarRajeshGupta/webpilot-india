@@ -1,60 +1,50 @@
-export default function Logo({ size = 42, showText = true, className = '' }) {
+export default function Logo({ size = 180, className = '' }) {
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
-      {/* Logo Mark */}
+    <div className={`flex items-center ${className}`}>
       <svg
-        width={size}
-        height={size}
-        viewBox="0 0 48 48"
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 200 60"
+        width={size}
+        height={(size * 60) / 200}
+        role="img"
+        aria-labelledby="t d"
       >
-        {/* Outer rounded shape */}
-        <rect
-          x="2"
-          y="2"
-          width="44"
-          height="44"
-          rx="14"
-          fill="url(#webpilot-gradient)"
-        />
-
-        {/* W / Path symbol */}
-        <path
-          d="M11 16L16.5 32L22 20.5L27.5 32L37 14"
-          stroke="white"
-          strokeWidth="4"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-
-        {/* Pilot/navigation dot */}
-        <circle cx="37" cy="14" r="3" fill="white" />
+        <title id="t">RappTech</title>
+        <desc id="d">RappTech — Build, Innovate, Grow</desc>
 
         <defs>
-          <linearGradient
-            id="webpilot-gradient"
-            x1="5"
-            y1="5"
-            x2="43"
-            y2="43"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stopColor="#2563EB" />
-            <stop offset="0.65" stopColor="#3B82F6" />
-            <stop offset="1" stopColor="#22C55E" />
+          <linearGradient id="rappGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#ffffff" />
+            <stop offset="50%" stopColor="#60a5fa" />
+            <stop offset="100%" stopColor="#c4b5fd" />
           </linearGradient>
         </defs>
+
+        <text
+          x="4"
+          y="32"
+          fontFamily="'Space Grotesk', 'DM Sans', sans-serif"
+          fontWeight="700"
+          fontSize="29"
+          letterSpacing="-1.2"
+          fill="url(#rappGradient)"
+        >
+          Rapp
+          <tspan fill="#f8fafc">Tech</tspan>
+        </text>
+
+        <text
+          x="6"
+          y="48"
+          fontFamily="'DM Sans', sans-serif"
+          fontWeight="500"
+          fontSize="6.5"
+          letterSpacing="1.5"
+          fill="#93c5fd"
+        >
+          BUILD | INNOVATE | GROW
+        </text>
       </svg>
-
-      {/* Wordmark */}
-      {showText && (
-        <div className="flex items-baseline gap-1">
-          <span className="font-bold tracking-tight text-white">WebPilot</span>
-
-          <span className="text-sm font-semibold text-blue-400">India</span>
-        </div>
-      )}
     </div>
   );
 }
