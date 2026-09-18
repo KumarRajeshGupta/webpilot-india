@@ -39,7 +39,7 @@ export default function Logo({ size = 180, className = '' }) {
           fontFamily="'DM Sans', sans-serif"
           fontWeight="500"
           fontSize="6.5"
-          letterSpacing="1.5"
+          letterSpacing="2"
           fill="#93c5fd"
         >
           BUILD | INNOVATE | GROW
